@@ -12,7 +12,7 @@ RUN apt-get update -y && \
     && echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc \
     && sed -i -E 's/# (ja_JP.UTF-8)/\1/' /etc/locale.gen && locale-gen
 
-ENV MYSQL_DATABASE=alternative-girls-grand-prix \
+ENV MYSQL_DATABASE=alternative_girls_grand_prix \
     MYSQL_USER=root \
     MYSQL_PASSWORD=root \
     MYSQL_ROOT_PASSWORD=root \
