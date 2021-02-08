@@ -15,7 +15,7 @@ class CreateItemKindsTable extends Migration
     {
         Schema::create('item_kinds', function (Blueprint $table) {
             $table->integer('item_id')->length(2)->comment('アイテムID');
-            $table->integer('item_kind')->length(3)->comment('アイテム種別');
+            $table->string('item_kind', 255)->comment('アイテム種別');
             $table->timestamp('create_date')->useCurrent()->comment('作成日');
             $table->timestamp('update_date')->useCurrent()->comment('更新日');
 

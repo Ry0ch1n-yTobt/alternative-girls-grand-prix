@@ -36,10 +36,12 @@ class CreateAlbumsTable extends Migration
             $table->integer('skill2_zero')->length(3)->nullable()->comment('衣装版0スキル2');
             $table->integer('skill1_max')->length(3)->nullable()->comment('衣装版MAXスキル1');
             $table->integer('skill2_max')->length(3)->nullable()->comment('衣装版MAXスキル2');
+            $table->integer('assist1_zero')->length(3)->nullable()->comment('衣装版0アシスト1');
+            $table->integer('assist2_zero')->length(3)->nullable()->comment('衣装版0アシスト2');
+            $table->integer('assist1_max')->length(3)->nullable()->comment('衣装版MAXアシスト1');
+            $table->integer('assist2_max')->length(3)->nullable()->comment('衣装版MAXアシスト2');
             $table->integer('characteristic1')->length(3)->nullable()->comment('特性1');
             $table->integer('characteristic2')->length(3)->nullable()->comment('特性2');
-            $table->integer('resistance1')->length(3)->nullable()->comment('耐性1');
-            $table->integer('resistance2')->length(3)->nullable()->comment('耐性2');
             $table->integer('delete_flg')->length(1)->default(0)->comment('削除フラグ');
             $table->timestamp('create_date')->useCurrent()->comment('作成日');
             $table->timestamp('update_date')->useCurrent()->comment('更新日');
