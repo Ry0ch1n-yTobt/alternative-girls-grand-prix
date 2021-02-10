@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-// use Illuminate\Http\Request;
-use Request;
+use Illuminate\Http\Request;
 use App\Models\UpdateHistory;
 
 class TopController extends Controller

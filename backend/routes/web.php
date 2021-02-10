@@ -14,3 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\TopController@index');
+
+Route::get('/search', 'App\Http\Controllers\SearchController@index');
+
