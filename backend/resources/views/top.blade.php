@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'オルガル2 グランプリDB TOP')
+@section('title', 'TOP')
 @section('content')
     <table>
         <thead>

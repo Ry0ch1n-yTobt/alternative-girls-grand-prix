@@ -100,8 +100,4 @@ $(function () {
             alert('通信に失敗しました。');
         });
     });
-
-    $('[name=detail').on('click', function () {
-
-    });
 });

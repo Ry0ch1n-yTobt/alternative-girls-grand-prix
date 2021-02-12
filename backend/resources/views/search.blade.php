@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'オルガル2 グランプリDB 検索')
+@section('title', '検索')
 @section('content')
     <h2>検索条件</h2>
     <div>
@@ -7,7 +7,7 @@
             <p>{{ $item['item_kind']['item_caption'] }}</p>
             @foreach ($item['data'] as $data)
                 <div>
-                    <label for="{{ $item['item_kind']['item_kind'] }}{{ $data->item_number }}">
+                    <label for="{{ $item['item_kind']['item_kind'] }}{{ $data->item_number }}" class="col-lg-2 col-sm-3 col-xs-6">
                         <input type="checkbox" class="checkbox" name="{{ $item['item_kind']['item_kind'] }}" id="{{ $item['item_kind']['item_kind'] }}{{ $data->item_number }}" value="{{ $data->item_number }}">{{ $data->item_name }}
                     </label>
                 </div>
@@ -23,7 +23,7 @@
         <button type="button" name="search_btn" id="searchBtn">検　索</button>
     </div>
     <div></div>
-    <table>
+    <table class="table">
         <colgroup>
         </colgroup>
         <thead>

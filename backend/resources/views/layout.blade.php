@@ -6,7 +6,7 @@
     <meta name="description" content="スマホ美少女バトルRPG「オルタナティブガールズ2」（オルガル）のグランプリ対応キャラの検索と詳細表示">
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title')</title>
+    <title>オルガル2 グランプリDB @yield('title')</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
@@ -15,7 +15,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/' )}}">オルガル2 グランプリDB</a>
+            <a class="navbar-brand" href="{{ url('/' ) }}">オルガル2 グランプリDB</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

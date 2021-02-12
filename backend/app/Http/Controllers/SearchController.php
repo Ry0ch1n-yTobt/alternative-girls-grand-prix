@@ -32,11 +32,11 @@ class SearchController extends Controller
         $rarities = $request->rarities;
         $weapons = $request->weapons;
         $gps = $request->gps;
-        $skillKinds = $request->skills;
+        $skillKinds = $request->skillKinds;
         $skillCondition = $request->skillCondition;
-        $assistKinds = $request->assists;
+        $assistKinds = $request->assistKinds;
         $assistCondition = $request->assistCondition;
-        $characteristicKinds = $request->characteristics;
+        $characteristicKinds = $request->characteristicKinds;
         $characteristicCondition = $request->characteristicCondition;
 
         // スキル、アシスト、特性の分類から取得するidを取得する
@@ -108,11 +108,11 @@ class SearchController extends Controller
                         // AND
                         return $query->where(function ($query) use ($skills) {
                             $query->whereIn('skill1_max', $skills[0])
-                                ->orWhereIn('skill2_max', $skills[1]);
+                                ->whereIn('skill2_max', $skills[1]);
                         })
                             ->orWhere(function ($query) use ($skills) {
                                 $query->whereIn('skill1_max', $skills[1])
-                                    ->orWhereIn('skill2_max', $skills[0]);
+                                    ->whereIn('skill2_max', $skills[0]);
                             });
                     } else {
                         // OR
@@ -136,11 +136,11 @@ class SearchController extends Controller
                         // AND
                         return $query->where(function ($query) use ($assists) {
                             $query->whereIn('assist1_max', $assists[0])
-                                ->orWhereIn('assist2_max', $assists[1]);
+                                ->whereIn('assist2_max', $assists[1]);
                         })
                             ->orWhere(function ($query) use ($assists) {
                                 $query->whereIn('assist1_max', $assists[1])
-                                    ->orWhereIn('assist2_max', $assists[0]);
+                                    ->whereIn('assist2_max', $assists[0]);
                             });
                     } else {
                         // OR
@@ -164,11 +164,11 @@ class SearchController extends Controller
                         // AND
                         return $query->where(function ($query) use ($characteristics) {
                             $query->whereIn('characteristic1', $characteristics[0])
-                                ->orWhereIn('characteristic2', $characteristics[1]);
+                                ->whereIn('characteristic2', $characteristics[1]);
                         })
                             ->orWhere(function ($query) use ($characteristics) {
                                 $query->whereIn('characteristic1', $characteristics[1])
-                                    ->orWhereIn('characteristic2', $characteristics[0]);
+                                    ->whereIn('characteristic2', $characteristics[0]);
                             });
                     } else {
                         // OR

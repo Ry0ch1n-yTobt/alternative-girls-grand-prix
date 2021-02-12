@@ -19,4 +19,4 @@ Route::get('/search', 'App\Http\Controllers\SearchController@index');
 
 Route::get('/ajax/search', 'App\Http\Controllers\SearchController@search');
 
-Route::get('/detail/{albumNo}', 'App\Http\Controllers\DetailController@search');
+Route::get('/detail/{albumNo}', 'App\Http\Controllers\DetailController@index');
