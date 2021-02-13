@@ -1,7 +1,8 @@
 @if ($albums)
     @foreach ($albums as $album)
-        <tr>
-            <td scope="row"><button type="button" name="detail"><a href="{{ url('/detail', $album->album_no) }}">詳細</a></button></td>
+        <tr data-album_no="{{ $album->album_no }}">
+            {{-- <td scope="row"><button type="button" name="detail"><a href="{{ url('/detail', $album->album_no) }}">詳細</a></button></td> --}}
+            <td scope="row"><button type="button" class="detail" name="detail">詳細</button></td>
             <td>{{ $album->album_name }}</td>
             <td>{{ $album->attributeCaption }}</td>
             <td>{{ $album->typeCaption }}</td>

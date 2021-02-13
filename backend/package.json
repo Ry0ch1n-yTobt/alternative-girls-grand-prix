@@ -22,6 +22,7 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "spin.js": "^4.1.0",
         "webpack": "^5.21.2"
     }
 }

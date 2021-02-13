@@ -87,7 +87,7 @@ $(function () {
             dataType: "json",
             beforeSend: function () {
                 $('#searchResult').html('');
-                $('.loading').removeClass('display-none');
+                $('#spinner').removeClass('is-hide');
             }
         }).done(function (json) {
             $(this).prop('disabled', false);
@@ -96,8 +96,21 @@ $(function () {
             } else {
                 alert('検索結果が０件、もしくは多すぎます。\n検索条件を変更して再度検索してください。')
             }
+            $('#spinner').addClass('is-hide');
         }).fail(function () {
             alert('通信に失敗しました。');
+            $('#spinner').addClass('is-hide');
         });
     });
+
+    // 詳細画面遷移
+    $(document).on('click', '.detail', function () {
+        let albumNo = $(this).parents('tr').data('album_no');
+        window.location.href = '/detail/' + albumNo;
+    });
+
+    // 検索画面に戻る
+    $('[name=return]').on('click', function () {
+        window.location.href = '/search';
+    })
 });
