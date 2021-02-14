@@ -184,10 +184,7 @@ class SearchController extends Controller
             ->orderBy('album_no', 'asc')
             ->get();
 
-        if (
-            count($albums) == 0
-            // || count($albums) > 100
-        ) {
+        if (count($albums) == 0 || count($albums) > 100) {
             $json = [
                 'result' => 'fail',
                 'view' => '',
