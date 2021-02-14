@@ -8,8 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>オルガル2 グランプリDB @yield('title')</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+    <script src="{{ mix('js/app.js') }}"></script>
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-info static-top">

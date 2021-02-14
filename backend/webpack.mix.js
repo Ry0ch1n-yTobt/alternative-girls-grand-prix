@@ -11,7 +11,22 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.disableNotifications()
+    .js('resources/js/app.js', 'public/js')
     .js('resources/assets/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .sourceMaps();
+    .sourceMaps()
+    .options({
+        postCss: [
+            require('autoprefixer')
+        ]
+    });
+
+    if (mix.config.inProduction) {
+        mix.version();
+    } else {
+        mix.browserSync({
+            proxy:     'localhost:10080',
+            startPath: '/'
+        });
+    }
