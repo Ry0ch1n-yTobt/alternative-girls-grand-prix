@@ -21,12 +21,3 @@ mix.disableNotifications()
             require('autoprefixer')
         ]
     });
-
-    if (mix.config.inProduction) {
-        mix.version();
-    } else {
-        mix.browserSync({
-            proxy:     'localhost:10080',
-            startPath: '/'
-        });
-    }
