@@ -15,7 +15,8 @@ RUN apt-get update && \
     docker-php-ext-install intl pdo_mysql zip bcmath && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get install -y nodejs && \
-    sed -i -E 's/# (ja_JP.UTF-8)/\1/' /etc/locale.gen && locale-gen
+    sed -i -E 's/# (ja_JP.UTF-8)/\1/' /etc/locale.gen && locale-gen && \
+    composer install
 ENV LANG ja_JP.UTF-8
 
 COPY ./php.ini /usr/local/etc/php/php.ini
