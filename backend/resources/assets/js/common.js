@@ -1,4 +1,29 @@
 $(function () {
+    // トップに戻る
+    var appear = false;
+    var pagetop = $('#pageTop');
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            if (appear == false) {
+                appear = true;
+                pagetop.stop().animate({
+                    'bottom': '50px'
+                }, 300);
+            }
+        } else {
+        if (appear) {
+            appear = false;
+            pagetop.stop().animate({
+                'bottom': '-50px'
+            }, 300);
+            }
+        }
+    });
+    pagetop.click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+
     // リセット
     $('#resetBtn').on('click', function () {
         $('.checkbox').prop('checked', false);
@@ -7,7 +32,6 @@ $(function () {
 
     // 検索実行
     $('#searchBtn').on('click', function () {
-        // $(this).prop('disabled', true);
         // キャラ
         let chars = $('[name=char]:checked').map(function () {
             return $(this).val();
@@ -112,5 +136,5 @@ $(function () {
     // 検索画面に戻る
     $('[name=return]').on('click', function () {
         window.location.href = '/search';
-    })
+    });
 });

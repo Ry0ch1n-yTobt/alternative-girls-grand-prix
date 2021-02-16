@@ -20,4 +20,4 @@ ENV LANG ja_JP.UTF-8
 
 COPY ./php.ini /usr/local/etc/php/php.ini
 
-WORKDIR /var/www/html
+WORKDIR /work

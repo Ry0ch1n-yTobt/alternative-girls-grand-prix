@@ -10,6 +10,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{ mix('js/app.js') }}"></script>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-info static-top">
@@ -42,5 +43,6 @@
             </div>
         </div>
     </div>
+    <div id="pageTop"><a href="#"></a></div>
 </body>
 </html>

@@ -1,20 +1,22 @@
 @extends('layout')
 @section('title', 'TOP')
 @section('content')
-    <table class="table updateHistorys">
-        <thead>
-            <th>更新日</th>
-            <th>更新内容</th>
-        </thead>
-        <tbody>
-            @foreach ($updateHistorys as $updateHistory)
-                <tr>
-                    <td>{{ $updateHistory->update_history_date->format('Y/m/d') }}</td>
-                    <td>{{ $updateHistory->update_history_details }}</td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
+    <div id="updateHistorys">
+        <table class="table">
+            <thead>
+                <th>更新日</th>
+                <th>更新内容</th>
+            </thead>
+            <tbody>
+                @foreach ($updateHistorys as $updateHistory)
+                    <tr>
+                        <td>{{ $updateHistory->update_history_date->format('Y/m/d') }}</td>
+                        <td>{{ $updateHistory->update_history_details }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
     <div>
         <h3>注意事項</h3>
         <a>
