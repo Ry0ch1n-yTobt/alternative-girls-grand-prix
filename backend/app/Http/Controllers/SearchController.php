@@ -67,7 +67,7 @@ class SearchController extends Controller
                     $characteristics[] = Characteristic::where('characteristic_kind', $characteristicKind)->select('characteristic_id')->get();
                 }
             } else {
-                $characteristics = Skill::where('characteristic_kind', $characteristicKinds)->select('characteristic_id')->get();
+                $characteristics = Characteristic::where('characteristic_kind', $characteristicKinds)->select('characteristic_id')->get();
             }
         }
 
