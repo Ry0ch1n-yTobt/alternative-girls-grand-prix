@@ -44,30 +44,30 @@ class SearchController extends Controller
         if ($skillKinds) {
             if ($skillCondition) {
                 foreach ($skillKinds as $skillKind) {
-                    $skills[] = Skill::where('skill_kind', $skillKind)->select('skill_id')->get();
+                    $skills[] = Skill::where('skill_kind', $skillKind)->where('delete_flg', 0)->select('skill_id')->get();
                 }
             } else {
-                $skills = Skill::where('skill_kind', $skillKinds)->select('skill_id')->get();
+                $skills = Skill::where('skill_kind', $skillKinds)->where('delete_flg', 0)->select('skill_id')->get();
             }
         }
 
         if ($assistKinds) {
             if ($assistCondition) {
                 foreach ($assistKinds as $assistKind) {
-                    $assists[] = Assist::where('assist_kind', $assistKind)->select('assist_id')->get();
+                    $assists[] = Assist::where('assist_kind', $assistKind)->where('delete_flg', 0)->select('assist_id')->get();
                 }
             } else {
-                $assists = Assist::where('assist_kind', $assistKinds)->select('assist_id')->get();
+                $assists = Assist::where('assist_kind', $assistKinds)->where('delete_flg', 0)->select('assist_id')->get();
             }
         }
 
         if ($characteristicKinds) {
             if ($characteristicCondition) {
                 foreach ($characteristicKinds as $characteristicKind) {
-                    $characteristics[] = Characteristic::where('characteristic_kind', $characteristicKind)->select('characteristic_id')->get();
+                    $characteristics[] = Characteristic::where('characteristic_kind', $characteristicKind)->where('delete_flg', 0)->select('characteristic_id')->get();
                 }
             } else {
-                $characteristics = Characteristic::where('characteristic_kind', $characteristicKinds)->select('characteristic_id')->get();
+                $characteristics = Characteristic::where('characteristic_kind', $characteristicKinds)->where('delete_flg', 0)->select('characteristic_id')->get();
             }
         }
 
