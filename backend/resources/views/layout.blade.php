@@ -9,6 +9,8 @@
     <title>オルガル2 グランプリDB @yield('title')</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{ mix('js/app.js') }}"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 </head>
@@ -30,7 +32,8 @@
             <div><a href="https://lp.alterna.amebagames.com/">ホームページ</a></div>
             <div><a href="https://twitter.com/alterna_girls?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></div>
         </div>
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+        <div class="line-it-button" data-lang="ja" data-type="share-b" data-ver="3" data-url="{{ request()->fullUrl() }}" data-color="default" data-size="small" data-count="false" style="display: none;"></div>
     </footer>
     <div id="spinner" class="overlay is-hide">
         <div class="overlay__wrapper">
