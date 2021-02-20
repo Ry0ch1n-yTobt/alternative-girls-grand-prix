@@ -47,7 +47,7 @@ class SearchController extends Controller
                     $skills[] = Skill::where('skill_kind', $skillKind)->where('delete_flg', 0)->select('skill_id')->get();
                 }
             } else {
-                $skills = Skill::where('skill_kind', $skillKinds)->where('delete_flg', 0)->select('skill_id')->get();
+                $skills = Skill::whereIn('skill_kind', $skillKinds)->where('delete_flg', 0)->select('skill_id')->get();
             }
         }
 
@@ -57,7 +57,7 @@ class SearchController extends Controller
                     $assists[] = Assist::where('assist_kind', $assistKind)->where('delete_flg', 0)->select('assist_id')->get();
                 }
             } else {
-                $assists = Assist::where('assist_kind', $assistKinds)->where('delete_flg', 0)->select('assist_id')->get();
+                $assists = Assist::whereIn('assist_kind', $assistKinds)->where('delete_flg', 0)->select('assist_id')->get();
             }
         }
 
@@ -67,7 +67,7 @@ class SearchController extends Controller
                     $characteristics[] = Characteristic::where('characteristic_kind', $characteristicKind)->where('delete_flg', 0)->select('characteristic_id')->get();
                 }
             } else {
-                $characteristics = Characteristic::where('characteristic_kind', $characteristicKinds)->where('delete_flg', 0)->select('characteristic_id')->get();
+                $characteristics = Characteristic::whereIn('characteristic_kind', $characteristicKinds)->where('delete_flg', 0)->select('characteristic_id')->get();
             }
         }
 
